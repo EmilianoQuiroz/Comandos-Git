@@ -74,4 +74,36 @@ Ahora debemos establecer las variables de configuración global, que son muy imp
         
         git push origin <nombre-de-la-rama>
         
-### 
+### Ramas
+
+- Crear una nueva rama
+
+        git branch <nombre-de-la-rama>
+- Crear una rama rama (Segunda opción)
+        
+        git checkout -b <nombre-de-la-rama> // Creará la nueva rama y cambiará a ella al instante
+
+- Visualiza todas las ramas en el repositorio actual
+
+        git branch
+        git branch --list
+
+- Cambiar a la rama especificada y actualiza el directorio activo
+        
+        git checkout <nombre-de-la-rama>
+
+- Volver a la rama anterior sin necesidad de escribir el nombre
+        
+        git switch -
+
+- Borrar una Rama
+        
+        git branch -D <nombre-de-la-rama>
+
+- Lista los branches con mas información
+
+        git show-branch
+
+- Combina el historial de la rama especificada con la rama actual
+
+        git merge <nombre-de-la-rama>
