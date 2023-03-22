@@ -13,4 +13,4 @@ Ahora debemos establecer las variables de configuración global, que son muy imp
 
 - git config puede ser usado para establecer una configuración específica de usuario, como el nombre de usuario ,y el email, etc.
         
-        - git config --gl
+        git config --gl
