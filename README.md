@@ -107,3 +107,107 @@ Ahora debemos establecer las variables de configuración global, que son muy imp
 - Combina el historial de la rama especificada con la rama actual
 
         git merge <nombre-de-la-rama>
+
+### Rebase
+- Se usa para aplicar ciertos cambios de una rama en otra, Une el branch actual con la main
+
+        git rebase
+
+- Cuando resolvemos los conflictos --continue continua la secuencia del rebase donde se pauso
+
+        git rebase --continue
+
+- Omite el conflicto y sigue su camino
+        
+        git rebase --skip
+- Devuelve todo al principio del rebase
+
+        git rebase --abort
+
+- Se usa para aplicar ciertos cambios de una rama en otra
+
+        git rebase <nombre-de-la-rama>
+
+### Remote
+
+- Permite ver todos los repositorios remotos asigandos o a los que apunta tu repositorio local
+        
+        git remote -v
+
+- Crear un repositorio remoto y lo enlaza con tu repositorio local
+        
+        git remote add <nombre/origin> <url>
+
+- Remover el enlace al repositorio remoto
+         
+        git remote rm <nombre/origin>
+
+- Permite cambiar la URL del repositorio remoto
+
+        git remote set-url origin <url>
+
+### Tag
+
+- Crea un nuevo tags
+        
+        git tag v0.0.1 -m "primera versión"
+
+- Muestra una lista de todos los tags
+        
+        git tag
+
+- Te permite ver cómo estaba el repositorio en cada estado
+        
+        git show v0.0.1
+
+- Enviar al repositorio en GitHub
+
+        git push --tags
+
+### OTROS COMANDOS
+- Busca los cambios nuevos y actualiza el repositorio
+        
+        git pull origin <nombre-de-la-rama>
+
+- Verifica cambios en el repositorio online con el local
+        
+        git fetch
+
+- Almacena temporalmente el trabajo sin comentar.
+        
+        git stash
+
+- Para recuperar los últimos cambios desde el stash a tu staging.
+        
+        git stash pop
+
+- Listar el historial de versiones de la rama actual.
+         
+        git log
+        git log --oneline --graph // Con este comando se lo puede ver mucho mejor 
+        git log --pretty=oneline --graph --decorate --all // Otra forma mas completa
+
+- Deshacer el commit si ya se hizo push
+        
+        git revert 3a67899
+
+- Para recuperar archivos que borre
+        
+        git checkout -- . 
+
+- Borrar un archivo
+
+        git rm <nombre-del-archivo> 
+
+- Para recuperar archivos que borre después del git rm
+
+        git checkout HEAD -- .
+
+- Eliminar un repositorio de Git creado con ‘git init’ en un directorio
+        
+        cd carpeta/
+        rm -rf .git
+
+- Cambia el nombre del archivo y lo prepara para commit
+        
+        git mv [archivo-original] [archivo-renombrado]
